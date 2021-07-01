@@ -49,10 +49,10 @@ function pow (x, n) {
 };
 console.log('x в степени n = ', pow (3, 2));//  3 * 3 = 9
 
-function pow2(x, n) {
+function pow2 (x, n) {
     return (n > 0) ? x * pow (x, n - 1) : 1;
   }
-console.log ('x в степени n = ', pow2(2,3))
+console.log ('x в степени n = ', pow2 (2,3))
 
 console.log('------------- # 8');
 function isBigger(a, b) {
