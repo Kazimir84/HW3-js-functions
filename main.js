@@ -22,7 +22,7 @@ function divide (y, z) {
     x = y / z;
     return x;
 };
-console.log('Деление чисел 9 / 3 = ', divide(9, 3));
+console.log('Деление чисел 9 / 3 = ', divide(9, 3));// 3
 
 console.log('------------- # 5');
 function numbersUp(n) {
@@ -83,7 +83,18 @@ console.log('x в степени n = ', pow (3, 2));//  3 * 3 = 9
 function pow2 (x, n) {
     return (n > 0) ? x * pow2 (x, n - 1) : 1;
 };
-console.log ('x в степени n = ', pow2 (2,3));
+console.log ('x в степени n = ', pow2 (2, 3));// 8
+
+function pow3 (xp, np) {   
+    for (let i = 1; i < np; np--) {        
+        xp = xp * xp;               
+    };
+    return xp;
+};
+let xp = prompt('X', 1);
+let np = prompt('N', 1);
+prompt('Результата возведения Х в степень N равняется ', pow3(xp, np));
+console.log('x в степени n = ', pow3 (xp, np));// Зависит от чисел введенных пользователем
 
 console.log('------------- # 8');
 function isBigger(a, b) {
