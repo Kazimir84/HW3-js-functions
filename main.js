@@ -86,36 +86,38 @@ function pow2 (x, n) {
 console.log ('x в степени n = ', pow2 (2, 3));// 8
 
 function pow3 (xp, np) {   
-    for (let i = 1; i < np; np--) {        
-        xp = xp * xp;               
+    let result = xp;
+    for (let i = 1; i < np; i++) {        
+        result *= xp;               
     };
-    return xp;
+    return result;
 };
 let xp = +prompt('X', 1);
 let np = +prompt('N', 1);
-alert('Результата возведения Х в степень N равняется = ' + pow3(xp, np));
+alert(`Результата возведения ${xp} в степень ${np} равняется = ` + pow3(xp, np));
 console.log('x в степени n = ', pow3 (xp, np));// Зависит от чисел введенных пользователем
 
 let btnpow3 = document.getElementById('pow4');
     btnpow3.addEventListener('click', pow4);
 
-function pow4(){
-    let xp = +prompt('Введите значение X');
-    let np = +prompt('Введите степень N');    
-    if (Number(xp) && Number(np)) {        
-        pow43(xp, np);
-        return pow43;
-    } 
-        alert('Введите цифровые значения!');
+function pow(x, n) {
+    let result = x;      
+    for (let i = 1; i < n; i++) {
+        result *= x;
+    }      
+    return result;
 };
-
-function pow43 (xp, np) {   
-    for (let i = 1; i < np; np--) {             
-        xp = xp * xp;                          
+    
+function pow4() {
+    let x = +prompt("Введите значение X");
+    let n = +prompt("Введите значение N");
+    pow(x, n);
+      
+    if (n < 1) {
+    alert(`Степень ${n} не поддерживается, используйте натуральное число`);
+    } else {
+    alert(`Результата возведения ${x} в степень ${n} равняется = ` + pow(x, n));
     };
-    alert('Результата возведения Х в степень N равняется = ' + xp);  
-    console.log('x в степени n = ', xp);// Зависит от чисел введенных пользователем
-    return xp;
 };
 
 console.log('------------- # 8');
