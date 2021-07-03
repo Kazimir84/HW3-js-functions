@@ -85,16 +85,16 @@ function pow2 (x, n) {
 };
 console.log ('x в степени n = ', pow2 (2, 3));// 8
 
-// function pow3 (xp, np) {   
-//     for (let i = 1; i < np; np--) {        
-//         xp = xp * xp;               
-//     };
-//     return xp;
-// };
-// let xp = +prompt('X', 1);
-// let np = +prompt('N', 1);
-// alert('Результата возведения Х в степень N равняется = ' + pow3(xp, np));
-// console.log('x в степени n = ', pow3 (xp, np));// Зависит от чисел введенных пользователем
+function pow3 (xp, np) {   
+    for (let i = 1; i < np; np--) {        
+        xp = xp * xp;               
+    };
+    return xp;
+};
+let xp = +prompt('X', 1);
+let np = +prompt('N', 1);
+alert('Результата возведения Х в степень N равняется = ' + pow3(xp, np));
+console.log('x в степени n = ', pow3 (xp, np));// Зависит от чисел введенных пользователем
 
 let btnpow3 = document.getElementById('pow4');
     btnpow3.addEventListener('click', pow4);
