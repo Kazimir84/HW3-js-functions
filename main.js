@@ -85,16 +85,38 @@ function pow2 (x, n) {
 };
 console.log ('x в степени n = ', pow2 (2, 3));// 8
 
-function pow3 (xp, np) {   
-    for (let i = 1; i < np; np--) {        
-        xp = xp * xp;               
+// function pow3 (xp, np) {   
+//     for (let i = 1; i < np; np--) {        
+//         xp = xp * xp;               
+//     };
+//     return xp;
+// };
+// let xp = +prompt('X', 1);
+// let np = +prompt('N', 1);
+// alert('Результата возведения Х в степень N равняется = ' + pow3(xp, np));
+// console.log('x в степени n = ', pow3 (xp, np));// Зависит от чисел введенных пользователем
+
+let btnpow3 = document.getElementById('pow4');
+    btnpow3.addEventListener('click', pow4);
+
+function pow4(){
+    let xp = +prompt('Введите значение X');
+    let np = +prompt('Введите степень N');    
+    if (Number(xp) && Number(np)) {        
+        pow43(xp, np);
+        return pow43;
+    } 
+        alert('Введите цифровые значения!');
+};
+
+function pow43 (xp, np) {   
+    for (let i = 1; i < np; np--) {             
+        xp = xp * xp;                          
     };
+    alert('Результата возведения Х в степень N равняется = ' + xp);  
+    console.log('x в степени n = ', xp);// Зависит от чисел введенных пользователем
     return xp;
 };
-let xp = prompt('X', 1);
-let np = prompt('N', 1);
-prompt('Результата возведения Х в степень N равняется ', pow3(xp, np));
-console.log('x в степени n = ', pow3 (xp, np));// Зависит от чисел введенных пользователем
 
 console.log('------------- # 8');
 function isBigger(a, b) {
